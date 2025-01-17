@@ -1,10 +1,5 @@
 import wineImage from "./wine-bar.jpg";
 
-const addImage = (div, image) => {
-    const imageEle = document.createElement("img");
-    imageEle.src = image
-    div.appendChild(imageEle);
-}
 
 const addTextContent = (div, element, text) => {
     const textElement = document.createElement(element);
@@ -14,12 +9,20 @@ const addTextContent = (div, element, text) => {
 
 
 function addHomepage() {
-    const contentDiv = document.querySelector("#content");
-    addImage(contentDiv, wineImage);
-    const homepageParagraphText = "Welcome to our wine bar and restaurant"
+    const heroDiv = document.querySelector(".hero");
+    const contentDiv = document.createElement("div")
+    contentDiv.classList.add("content-container");
+
+    // const imageContainer = document.createElement("div");
+    // imageContainer.classList.add("image-container");
+
+    // // addImage(imageContainer, wineImage);
+    // contentDiv.appendChild(imageContainer);
+    const homepageParagraphText = "Welcome to our exclusive wine bar and restaurant"
 
     addTextContent(contentDiv, "h1", "Carcassonne");
     addTextContent(contentDiv, "p", homepageParagraphText);
+    heroDiv.appendChild(contentDiv)
 }
 
 export default addHomepage
