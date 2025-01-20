@@ -12,15 +12,13 @@ html, body {
 body {
     background-image: url("./wine-bar.jpg");
     background-size: cover;
-    /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
     font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
 }
 
 nav {
     display: flex;
     justify-content: space-evenly;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.559);
     height: var(--nav-height);
     font-weight: bold;
 }
@@ -41,6 +39,7 @@ button:hover {
     justify-content: center;
     align-items: center;
     height: calc(100% - var(--nav-height));
+    font-style: italic;
 }
 
 .content-container {

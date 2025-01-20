@@ -7,22 +7,25 @@ const addTextContent = (div, element, text) => {
     div.appendChild(textElement);
 }
 
-
-function addHomepage() {
+function addContainerDivs() {
     const heroDiv = document.querySelector(".hero");
+    while (heroDiv.firstChild) {
+        heroDiv.removeChild(heroDiv.firstChild);
+    }
     const contentDiv = document.createElement("div")
     contentDiv.classList.add("content-container");
+    heroDiv.appendChild(contentDiv);
+    
+    return [heroDiv, contentDiv];
+}
 
-    // const imageContainer = document.createElement("div");
-    // imageContainer.classList.add("image-container");
-
-    // // addImage(imageContainer, wineImage);
-    // contentDiv.appendChild(imageContainer);
+function addHomepage() {
+    const [_, contentDiv] = addContainerDivs()
     const homepageParagraphText = "Welcome to our exclusive wine bar and restaurant"
 
     addTextContent(contentDiv, "h1", "Carcassonne");
     addTextContent(contentDiv, "p", homepageParagraphText);
-    heroDiv.appendChild(contentDiv)
 }
 
-export default addHomepage
+export default addHomepage;
+export { addTextContent, addContainerDivs };
