@@ -5,6 +5,7 @@
 
 html, body {
     margin: 0;
+    min-height: 100vh;
 }
 
 body {
@@ -58,7 +59,7 @@ button:hover {
     border-radius: 10px;
 }
 
-.content-container > h1 {
+.homepage > h1 {
     font-size: 48px;
 }
 
@@ -77,4 +78,20 @@ button:hover {
 
 .menu p:last-child {
     margin-bottom: 10px;
+}
+
+.about {
+    padding: 30px;
+}
+
+footer {
+    min-height: 35px;
+    background-color: rgba(0, 0, 0, 0.799);
+    position: sticky;
+    top: 100vh;
+    padding: 5px;
+}
+
+a {
+    color: white;
 }

@@ -22,6 +22,7 @@ function addContainerDivs() {
 function addHomepage() {
     const [_, contentDiv] = addContainerDivs()
     const homepageParagraphText = "Welcome to our exclusive wine bar and restaurant"
+    contentDiv.classList.add("homepage");
 
     addTextContent(contentDiv, "h1", "Carcassonne");
     addTextContent(contentDiv, "p", homepageParagraphText);

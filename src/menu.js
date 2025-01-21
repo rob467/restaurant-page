@@ -39,7 +39,6 @@ function addMenu() {
     const menuItems = createMenuItems();
     const [_, contentDiv] = addContainerDivs();
     addTextContent(contentDiv, "h1", "Menu");
-    contentDiv.classList.add("menu");
 
     const createMenuSectionDiv = (sectionHeader, parentDiv = contentDiv) => {
         const sectionDiv = document.createElement("div");
