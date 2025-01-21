@@ -12,7 +12,7 @@ function addContainerDivs() {
     while (heroDiv.firstChild) {
         heroDiv.removeChild(heroDiv.firstChild);
     }
-    const contentDiv = document.createElement("div")
+    const contentDiv = document.createElement("div");
     contentDiv.classList.add("content-container");
     heroDiv.appendChild(contentDiv);
     
